@@ -6,14 +6,14 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "terraformlvc-june25-terraform-state"
-    key = "global/s3/terraform.tfstate"
-    region = "ap-south-1"
+  # backend "s3" {
+  #   bucket = "terraformlvc-june25-terraform-state"
+  #   key = "global/s3/terraform.tfstate"
+  #   region = "ap-south-1"
 
-    dynamodb_table = "terraformlvc_june25_terraform_locks"
-    encrypt = true
-  }
+  #   dynamodb_table = "terraformlvc_june25_terraform_locks"
+  #   encrypt = true
+  # }
 }
 
 output "s3_bucket_arn" {
