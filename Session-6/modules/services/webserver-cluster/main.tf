@@ -7,8 +7,12 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "ap-south-2"
+}
+
 resource "aws_launch_template" "example-web-server" {
-  image_id = "ami-0f918f7e67a3323f0"
+  image_id = "ami-07891c5a242abf4bc"
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-server-group.id]
 
