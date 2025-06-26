@@ -23,3 +23,7 @@ variable "db_address" {
 variable "db_port" {
   type = number
 }
+
+variable "user_data" {
+  type = string
+}
